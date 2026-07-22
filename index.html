@@ -913,52 +913,6 @@
         </article>
       </div>
     </section>
-    <!-- separator -->
-    <hr class="border-b border-white/5 mx-4" />
-    <section id="newsletter" class="px-4 py-6">
-      <div
-        class="container m-auto md:max-w-md bg-spartan-accent-primary/30 border border-spartan-accent-primary/30 px-4 py-6 flex flex-col gap-6 rounded-2xl bg-spartan-accent-primary text-center">
-        <!-- caption -->
-        <div>
-          <i class="bi bi-trophy-fill text-2xl text-spartan-text-primary"></i>
-          <div class="flex flex-col gap-2">
-            <h2 class="text-2xl uppercase font-extrabold text-spartan-text-primary">
-              Receba as melhores<br /><span class="text-spartan-accent-primary">ofertas em primeira <br />mão</span>
-            </h2>
-            <p class="text-base font-light text-spartan-text-primary">
-              Cadastre seu e-mail e seja o primeiro a saber sobre promoções exclusivas, lançamentos e conteúdos de
-              performance.
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-col gap-3">
-          <a class="flex items-center justify-center gap-3 p-3 h-max bg-white rounded-full text-sm text-spartan-accent-primary"
-            href="https://s.shopee.com.br/7prosJ35hj" target="_blank">
-            <i class="bi bi-cart-fill"></i>
-            <p class="font-semibold">Quero meu kit - R$76,42</p>
-          </a>
-        </div>
-
-        <div class="flex flex-col gap-3">
-          <form id="newsletterForm" class="grid grid-cols-3">
-            <input id="email"
-              class="col-span-2 rounded-l-lg text-xs px-4 py-3 bg-spartan-bg-tertiary text-spartan-text-sedondary focus:outline-none focus:text-spartan-text-primary"
-              type="email" placeholder="Seu melhor e-mail" required>
-            <button
-              class="px-4 text-xs rounded-r-lg uppercase font-medium col-span-1 w-full bg-spartan-accent-primary text-spartan-text-primary"
-              type="submit">
-              Cadastrar
-            </button>
-          </form>
-
-          <div class="flex gap-1 items-center justify-center text-xs text-spartan-text-primary">
-            <i class="bi bi-lock-fill text-green-400"></i>
-            <p>Sem spam. Seus dados estão protegidos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
   <!-- separator -->
   <hr class="border-b border-white/5 mx-4" />
@@ -1114,57 +1068,6 @@
       });
     });
   </script>
-
-  <!-- Importing Toastify JS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <script>
-    document.getElementById("newsletterForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
-
-      try {
-        const response = await fetch(`${window.env.API_URL}/newsletter/register`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ email })
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-          console.log("Deu certo!")
-          Toastify({
-            text: data.msg,
-            duration: 3000,
-            gravity: "top", // top or bottom
-            position: "right", // left, center or right
-            backgroundColor: "green"
-          }).showToast();
-        } else {
-
-          Toastify({
-            text: data.msg || "Erro ao cadastrar!",
-            duration: 3000,
-            gravity: "top",
-            position: "right",
-            backgroundColor: "red"
-          }).showToast();
-        }
-      } catch (error) {
-        console.log("Deu errado", error);
-        Toastify({
-          text: "Erro de conexão com o servidor!",
-          duration: 3000,
-          gravity: "top",
-          position: "right",
-          backgroundColor: "orange"
-        }).showToast();
-      }
-    });
-  </script>
-
 </body>
 
 </html>
