@@ -1,0 +1,1151 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NG NUTRITION | Whey Promo</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Guerrilla&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!-- importing Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <!-- Importing config.js -->
+    <script src="config.js"></script>
+  <!-- importing tailwind  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- tailwind.config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Open Sans", "sans-serif"],
+          },
+          colors: {
+            spartan: {
+              bg: {
+                primary: "#0A0A0A",
+                secondary: "#191919",
+                tertiary: "#252525",
+              },
+              text: {
+                primary: "#FFFFFF",
+                secondary: "#D9D9D9",
+              },
+              accent: {
+                primary: "#DD4738",
+                variant: "#BC382A",
+                secondary: "#D4AF37",
+              },
+              border: {
+                primary: "rgba(186,26,26,.3)",
+              },
+            },
+          },
+          keyframes: {
+            animateBounce: {
+              "0%": { transform: "translateY(0)" },
+              "100%": { transform: "translateY(-4px)" },
+            },
+          },
+          animation: {
+            "my-bounce": "animateBounce 0.6s infinite alternate ease-in-out",
+          },
+
+          fontSize: {
+            "price-main": ["3rem", { lineHeight: "1" }],
+            "price-decimal": ["1.25rem", { lineHeight: "1" }],
+          },
+          backgroundImage: {
+            "spartan-radial":
+              "radial-gradient(circle, rgba(221,71,56,0.05) 0%, rgba(0,0,0,0.3) 100%)",
+          },
+        },
+      },
+    };
+  </script>
+  <!-- info -->
+  <style>
+    .info {
+      max-height: 0;
+      overflow: hidden;
+      transition:
+        max-height 0.4s ease,
+        opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    .info.show {
+      max-height: max-content;
+      /* ajuste conforme necessário */
+      opacity: 1;
+      padding: 1rem;
+    }
+  </style>
+
+  <style>
+    .brand-title {
+      font-family: "Protest Guerrilla", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<body class="bg-spartan-bg-primary">
+  <header
+    class="p-4 sticky top-0 left-0 right-0 z-50 border-b border-spartan-accent-primary/15 bg-spartan-bg-secondary">
+    <div class="container m-auto">
+      <nav>
+        <ul class="grid grid-cols-2 items-center justify-center">
+          <li class="justify-self-end px-2 py-1 bg-spartan-bg-tertiary w-max h-max rounded">
+            <a href="#" class="text-base brand-title text-spartan-accent-primary">NG</a>
+          </li>
+          <li class="justify-self-end">
+            <a class="uppercase text-sm font-semibold bg-spartan-accent-primary rounded-full justify-self-end w-max h-max px-3 py-2 text-spartan-text-primary"
+              href="https://s.shopee.com.br/7VExy5dCz" target="_blank">Comprar Kit</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- hero -->
+    <section id="hero" class="relative px-4 py-6">
+      <div class="abolute inset-0 bg-gradient-to-br from-black/5 from-0% to-red-600 to-100%"></div>
+      <!-- caption -->
+      <div class="container m-auto md:max-w-md flex flex-col items-center gap-4 text-center">
+        <div class="flex flex-col gap-3">
+          <p class="text-sm uppercase text-spartan-accent-variant font-medium">
+            Método comprovado
+          </p>
+          <h1 class="text-3xl text-spartan-text-primary font-extrabold">
+            RESULTADOS DE
+            <span class="text-spartan-accent-primary">VERDADE.</span>
+            <br /><span class="text-spartan-text-secondary">
+              DO JEITO CERTO.</span>
+          </h1>
+          <p class="text-base text-spartan-text-secondary font-light">
+            A combinação certa de suplementos para quem leva a academia a sério.
+            Treine duro, recuperação real resultados visíveis.
+          </p>
+        </div>
+
+        <div
+          class="shadow-2xl shadow-spartan-accent-primary/15 animate-my-bounce w-[224px] h-full bg-spartan-bg-secondary flex items-center justify-center rounded">
+          <img class="h-full object-center animate-[wiggle_1s_ease-in-out_infinite]"
+            src="assets/products/hero.png" alt="Imagem do Produto" />
+        </div>
+      </div>
+    </section>
+    <!-- intro -->
+    <section id="intro" class="px-4 py-6">
+      <div class="container m-auto md:max-w-md flex flex-col gap-6">
+        <div
+          class="flex flex-col gap-2 px-4 py-6 bg-spartan-bg-secondary rounded-lg border-2 border-spartan-border-primary">
+          <p class="text-xs text-spartan-text-secondary text-light line-through">
+            R$99,99
+          </p>
+          <h2 class="flex items-baseline text-spartan-text-primary font-extrabold">
+            <span class="text-sm text-spartan-text-secondary mr-1">R$</span>
+            <span class="text-price-main">76</span>
+            <span class="text-price-decimal">,42</span>
+          </h2>
+          <p class="text-xs text-spartan-text-secondary font-light">
+            12x de R$7,42 no cartão de crédito
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 grid-rows-2 gap-4">
+          <div class="flex flex-col gap-1 items-center rounded-lg bg-spartan-bg-secondary p-6">
+            <i class="bi bi-star-fill text-spartan-text-secondary text-2xl"></i>
+            <h3 class="text-3xl font-extrabold text-spartan-text-primary">
+              4.9
+            </h3>
+            <p class="text-xs font-light text-spartan-text-secondary">
+              Avaliações
+            </p>
+          </div>
+          <div class="flex flex-col gap-1 items-center rounded-lg bg-spartan-bg-secondary p-6">
+            <i class="bi bi-people-fill text-2xl text-spartan-text-secondary"></i>
+            <h3 class="text-3xl font-extrabold text-spartan-text-primary">
+              44K
+            </h3>
+            <p class="text-xs font-light text-spartan-text-secondary">
+              Clientes
+            </p>
+          </div>
+          <div class="flex flex-col gap-1 items-center rounded-lg bg-spartan-bg-secondary p-6">
+            <i class="bi bi-box2-fill text-spartan-text-secondary text-2xl"></i>
+            <h3 class="text-3xl font-extrabold text-spartan-text-primary">
+              80K
+            </h3>
+            <p class="text-xs font-light text-spartan-text-secondary">
+              Vendidos
+            </p>
+          </div>
+          <div class="flex flex-col gap-1 items-center rounded-lg bg-spartan-bg-secondary p-6">
+            <i class="bi bi-shield-shaded text-spartan-text-secondary text-2xl"></i>
+            <h3 class="text-3xl font-extrabold text-spartan-text-primary">
+              -20%
+            </h3>
+            <p class="text-xs font-light text-spartan-text-secondary">
+              Primeira compra
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <a id="main-btn" href="https://s.shopee.com.br/7VExy5dCz7" target="_blank"
+            class="shadow-2xl shadow-spartan-accent-primary flex items-center justify-center gap-3 p-4 bg-spartan-accent-primary rounded-full text-base text-spartan-text-primary">
+            <i class="bi bi-cart-fill"></i>
+            <p class="uppercase text-base font-bold">
+              Quero ver meu KIT Agora!
+            </p>
+
+            <i class="bi bi-arrow-up-right-circle-fill"></i>
+          </a>
+
+          <div class="flex items-center justify-center gap-3">
+            <i class="bi bi-shield-fill-check text-xs text-green-400"></i>
+            <p class="text-xs text-semibold text-spartan-text-primary">
+              Compra 100% segura | Frete grátis - São Paulo e Região
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <!-- benefits -->
+    <section id="benefits" class="px-4 py-6">
+      <div
+        class="container rounded-2xl m-auto md:max-w-md px-4 py-6 bg-spartan-bg-secondary grid grid-rows-3 grid-cols-2 gap-6">
+        <div class="flex items-center gap-2 text-spartan-text-secondary text-sm text-light">
+          <i class="bi bi-box2-fill"></i>
+          <p class="capitalize">Entrega rápida</p>
+        </div>
+
+        <div class="flex items-center gap-2 text-spartan-text-secondary text-sm text-light">
+          <i class="bi bi-lock-fill"></i>
+          <p class="capitalize">Pagamento seguro</p>
+        </div>
+
+        <div class="flex items-center gap-2 text-spartan-text-secondary text-sm text-light">
+          <i class="bi bi-question-circle-fill"></i>
+          <p class="capitalize">Suporte 24/7</p>
+        </div>
+
+        <div class="flex items-center gap-2 text-spartan-text-secondary text-sm text-light">
+          <i class="bi bi-clock-fill"></i>
+          <p class="capitalize">Garantia de 30 dias</p>
+        </div>
+
+        <div class="col-span-2 flex items-center justify-center gap-2 text-spartan-text-secondary text-sm text-light">
+          <i class="bi bi-flask-fill"></i>
+          <p class="capitalize">Fórmula certificada</p>
+        </div>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <!-- products -->
+    <section id="products" class="px-4 py-6">
+      <div class="container m-auto md:max-w-md flex flex-col gap-6 items-center">
+        <div class="flex flex-col gap-2 text-center">
+          <p class="text-sm text-spartan-accent-variant font-medium">
+            KIT COMPLETO
+          </p>
+          <h2 class="text-2xl uppercase font-extrabold text-spartan-text-primary">
+            O que vem no
+            <span class="capitalize text-spartan-accent-primary">kit?</span>
+          </h2>
+          <p class="text-sm text-spartan-text-secondary font-light">
+            Tudo reunido em um único pacote
+          </p>
+        </div>
+
+        <div class="grid grid-cols-[repeat(auto-fill(360px,1fr))] gap-4">
+          <!-- Whey Protein Fusion -->
+          <article id="whey"
+            class="border border-white/5 w-full p-4 flex items-center gap-4 rounded-lg bg-spartan-bg-secondary">
+            <div class="py-2 px-4 bg-spartan-bg-tertiary rounded-lg">
+              <img class="w-14 h-14 object-center object-cover" src="assets/products/whey.png"
+                alt="Imagem do Whey Protein Fusion" />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between items-center flex-1">
+                <span
+                  class="uppercase text-xs font-light text-spartan-text-primary bg-spartan-accent-primary w-max h-max rounded-full px-2 py-1">Whey</span>
+                <a class="text-xs flex gap-1 items-center p-2 bg-spartan-accent-primary text-spartan-text-primary rounded"
+                  href="https://s.shopee.com.br/6Ajc2lzoc6" target="_blank">
+                  <span>Ver na Shopee</span>
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </a>
+              </div>
+              <h3 class="uppercase text-base font-extrabold text-spartan-text-primary">
+                Whey Protein Fusion
+              </h3>
+              <p class="text-sm font-light text-spartan-text-secondary">
+                Blend de Concentrate e Isolate. Recuperação acelerada e ganho
+                de massa.
+              </p>
+
+              <div class="flex items-center gap-3">
+                <div class="py-1 px-2 bg-spartan-bg-tertiary rounded">
+                  <p class="text-xs text-light text-spartan-text-secondary">
+                    900g
+                  </p>
+                </div>
+
+                <div class="py-1 px-2 bg-spartan-bg-tertiary rounded">
+                  <p class="text-xs text-light text-spartan-text-secondary">
+                    30 doses
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- Creatina -->
+          <article id="creatine"
+            class="border border-white/5 w-full p-4 flex items-center gap-4 rounded-lg bg-spartan-bg-secondary">
+            <div class="overflow-hidden py-2 px-4 bg-spartan-bg-tertiary rounded-lg">
+              <img class="w-14 h-14 object-center object-cover" src="assets/products/creatina.png"
+                alt="Imagem da Creatina Fusion" />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between items-center flex-1">
+                <span
+                  class="uppercase text-xs font-light text-spartan-text-primary bg-spartan-accent-primary w-max h-max rounded-full px-2 py-1">Creatina</span>
+                <a class="text-xs flex gap-1 items-center p-2 bg-spartan-accent-primary text-spartan-text-primary rounded"
+                  href="https://s.shopee.com.br/gOfVRwYkN" target="_blank">
+                  <span>Ver na Shopee</span>
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </a>
+              </div>
+              <h3 class="uppercase text-base font-extrabold text-spartan-text-primary">
+                Creatina Monohidratada
+              </h3>
+              <p class="text-sm font-light text-spartan-text-secondary">
+                100% pura para aumento de força e performance intensa.
+              </p>
+
+              <div class="flex items-center gap-3">
+                <div class="py-1 px-2 bg-spartan-bg-tertiary rounded">
+                  <p class="text-xs text-light text-spartan-text-secondary">
+                    300g
+                  </p>
+                </div>
+
+                <div class="py-1 px-2 bg-spartan-bg-tertiary rounded">
+                  <p class="text-xs text-light text-spartan-text-secondary">
+                    60 doses
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- BCAA -->
+          <article class="border border-white/5 w-full p-4 flex items-center gap-4 rounded-lg bg-spartan-bg-secondary">
+            <div class="overflow-hidden py-2 px-4 bg-spartan-bg-tertiary rounded-lg">
+              <img class="w-14 h-14 object-center object-cover" src="assets/products/bcaa.png"
+                alt="Imagem do BCAA Fusion" />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between items-center flex-1">
+                <span
+                  class="uppercase text-xs font-light text-spartan-text-primary bg-spartan-accent-primary w-max h-max rounded-full px-2 py-1">Bcaa</span>
+                <a class="text-xs flex gap-1 items-center p-2 bg-spartan-accent-primary text-spartan-text-primary rounded"
+                  href="https://s.shopee.com.br/2BDTIGBUzL" target="_blank">
+                  <span>Ver na Shopee</span>
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </a>
+              </div>
+
+              <h3 class="uppercase text-base font-extrabold text-spartan-text-primary">
+                BCAA Aminoácidos
+              </h3>
+              <p class="text-sm font-light text-spartan-text-secondary">
+                Redução da fadiga e recuperação pós-treino otimizada.
+              </p>
+              <div class="flex items-center gap-3">
+                <div class="py-1 px-2 bg-spartan-bg-tertiary rounded">
+                  <p class="text-xs text-light text-spartan-text-secondary">
+                    200 caps
+                  </p>
+                </div>
+
+                <div class="py-1 px-2 bg-spartan-bg-tertiary rounded">
+                  <p class="text-xs text-light text-spartan-text-secondary">
+                    60 doses
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- shaker -->
+          <article class="border border-white/5 w-full p-4 flex items-center gap-4 rounded-lg bg-spartan-bg-secondary">
+            <div class="overflow-hidden py-2 px-4 bg-spartan-bg-tertiary rounded-lg">
+              <img class="w-14 h-14 object-center object-cover" src="assets/products/shaker.png"
+                alt="Imagem do Shaker Fusion" />
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-between items-center flex-1">
+                <span
+                  class="uppercase text-xs font-light text-spartan-text-primary bg-spartan-accent-primary w-max h-max rounded-full px-2 py-1">brinde</span>
+                <a class="text-xs flex gap-1 items-center p-2 bg-spartan-accent-primary text-spartan-text-primary rounded"
+                  href="https://s.shopee.com.br/3LPQhvpiao" target="_blank">
+                  <span>Ver na Shopee</span>
+                  <i class="bi bi-arrow-up-right-circle"></i>
+                </a>
+              </div>
+
+              <h3 class="uppercase text-base font-extrabold text-spartan-text-primary">
+                Shaker oficial exclusivo
+              </h3>
+              <p class="text-sm font-light text-spartan-text-secondary">
+                Premium, anti-vazamento, design ergonônico. Incluso no kit.
+              </p>
+              <div class="flex items-center gap-3">
+                <p class="text-lg uppercase font-extrabold text-spartan-accent-secondary">
+                  Grátis
+                </p>
+                <p class="text-xs text-spartan-text-secondary">
+                  (Sujeito a disponibilidade do estoque.)
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <!-- pre-training -->
+    <section id="pre-training" class="px-4 py-6">
+      <div class="container m-auto md:max-w-md rounded-full bg-spartan-radial flex flex-col gap-4">
+        <!-- caption -->
+        <div class="relative z-50 text-center flex flex-col gap-1">
+          <p class="uppercase text-spartan-accent-variant text-sm text-medium">
+            Acelere seus resultados
+          </p>
+          <h2 class="uppercase text-2xl text-spartan-text-primary">
+            Potencialize
+            <span class="text-spartan-accent-primary">com mais produtos</span>
+          </h2>
+        </div>
+        <!-- image -->
+        <div class="w-[164px] h-[164px] m-auto p-6 rounded-lg bg-gradient-to-r from-[#0A0A0A] to-[#0C0C0C]">
+          <img class="object-cover object-center rounded-lg" src="assets/products/diabo-verde.png"
+            alt="Imagem do suplemento Diabo Verde" />
+        </div>
+        <!-- diabo verde -->
+        <article class="relative p-6 rounded-2xl border border-spartan-border-primary/30">
+          <!-- background -->
+          <div class="absolute inset-0 rotate-210 bg-gradient-to-r from-black/30 to-[#93000A]/15"></div>
+          <div class="flex flex-col gap-2">
+            <!-- tagline -->
+            <div class="py-1 px-2 rounded-full bg-spartan-accent-primary w-max h-max">
+              <p class="uppercase text-xs text-spartan-text-primary">
+                Mais vendido
+              </p>
+            </div>
+            <!-- title -->
+            <h3 class="text-base uppercase text-spartan-text-primary  font-extrabold">
+              Pré-Treino Diabo verde
+            </h3>
+            <p class="text-sm text-spartan-text-secondary font-light">
+              Fórmula exclusiva com termogênicos naturais, cafeína estratégica
+              e precursores de óxido nítrico.
+            </p>
+
+            <ul class="flex flex-col gap-3 text-sm text-spartan-text-primary font-medium">
+              <li class="flex items-center gap-2">
+                <i class="bi bi-check-circle-fill text-base text-spartan-accent-primary"></i>
+                <p>Energia duradoura sem crash.</p>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="bi bi-check-circle-fill text-base text-spartan-accent-primary"></i>
+                <p>Foco e concentração máximos.</p>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="bi bi-check-circle-fill text-base text-spartan-accent-primary"></i>
+                <p>Termogênico natural.</p>
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="bi bi-check-circle-fill text-base text-spartan-accent-primary"></i>
+                <p>Pump muscular intenso.</p>
+              </li>
+            </ul>
+            <!-- footer -->
+            <div class="flex items-center justify-between gap-3">
+              <!-- price -->
+              <div class="flex flex-col gap-1">
+                <p class="line-through text-sm text-spartan-text-secondary font-light">
+                  De R$68,90
+                </p>
+                <h3 class="text-2xl font-extrabold uppercase text-spartan-text-primary">
+                  R$38,68
+                </h3>
+              </div>
+              <!-- button -->
+              <a class="cursor-pointer p-2 uppercase text-xs text-center text-spartan-text-primary font-extrabold bg-spartan-accent-primary rounded-lg shadow shadow-spartan-accent-primary"
+                href="https://s.shopee.com.br/5Ar3L2EtJz" target="_blank">
+                Quero esse também
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <!-- testimonials -->
+    <section id="testimonials" class="px-4 py-6">
+      <div class="container m-auto md:max-w-md flex flex-col gap-6">
+        <!-- caption -->
+        <div class="relative z-50 text-center flex flex-col gap-1">
+          <p class="uppercase text-spartan-accent-variant text-sm text-medium">
+            Prova social
+          </p>
+          <h2 class="uppercase text-2xl text-spartan-text-primary">
+            Quem já se
+            <br />
+            <span class="text-spartan-accent-primary">transformou</span>
+          </h2>
+        </div>
+        <!-- card -->
+        <article class="flex flex-col gap-6 px-4 py-6 border-white/5 text-center bg-spartan-bg-secondary rounded-2xl">
+          <!-- header -->
+          <div class="flex flex-col items-center justify-center gap-2 text-center">
+            <h3 class="text-6xl font-extrabold text-spartan-text-primary">
+              4.9
+            </h3>
+            <p class="text-sm text-spartan-text-secondary font-normal capitalize">
+              Média geral
+            </p>
+            <div class="flex gap-2 items-center justify-center text-spartan-accent-secondary text-base">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+          <!-- body -->
+          <ul class="flex flex-col gap-2">
+            <li class="flex items-center gap-2">
+              <p class="text-sm text-spartan-text-secondary">5</p>
+              <div class="relative w-full h-2 bg-spartan-bg-tertiary rounded-full overflow-hidden">
+                <span class="absolute inset-0 bg-spartan-accent-secondary w-[88%] rounded-r-full"></span>
+              </div>
+              <p class="text-sm text-spartan-text-secondary">88%</p>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <p class="text-sm text-spartan-text-secondary">4</p>
+              <div class="relative w-full h-2 bg-spartan-bg-tertiary rounded-full overflow-hidden">
+                <span class="absolute inset-0 bg-spartan-accent-secondary w-[9%] rounded-r-full"></span>
+              </div>
+              <p class="text-sm text-spartan-text-secondary">9%</p>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <p class="text-sm text-spartan-text-secondary">3</p>
+              <div class="relative w-full h-2 bg-spartan-bg-tertiary rounded-full overflow-hidden">
+                <span class="absolute inset-0 bg-spartan-accent-secondary w-[2%] rounded-r-full"></span>
+              </div>
+              <p class="text-sm text-spartan-text-secondary">2%</p>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <p class="text-sm text-spartan-text-secondary">2</p>
+              <div class="relative w-full h-2 bg-spartan-bg-tertiary rounded-full overflow-hidden">
+                <span class="absolute inset-0 bg-spartan-accent-secondary w-[1%] rounded-r-full"></span>
+              </div>
+              <p class="text-sm text-spartan-text-secondary">1%</p>
+            </li>
+          </ul>
+          <!-- footer -->
+          <div class="flex items-center gap-3 justify-center">
+            <p class="text-2xl text-spartan-text-primary font-extrabold">
+              +44.000
+            </p>
+            <p class="text-sm font-light lowercase text-spartan-text-secondary">
+              avaliações verificadas
+            </p>
+          </div>
+        </article>
+
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-6">
+          <!-- user 2 -->
+          <article
+            class="cursor-pointer flex flex-col gap-3 bg-spartan-bg-secondary px-4 py-6 rounded-2xl border border-white/5 hover:border-bg-spartan-accent-primary">
+            <!-- header -->
+            <div class="flex gap-2 items-center justify-start text-spartan-accent-secondary text-sm">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <cite class="text-xs font-light text-spartan-text-secondary">
+              “Sim veio igual e chegou super rápido, indico valeu o preço que
+              paguei e vamos pra as próximas compras, ganhei o brinde que só
+              vem se estiver disponível em estoque e fiquei muito feliz
+              que...”
+            </cite>
+            <div class="border-b border-white/5"></div>
+            <a href="https://shopee.com.br/shop/buyer/505736325" target="_blank" class="flex gap-3 items-center">
+              <img class="w-10 h-10 object-center object-cover rounded-full" src="assets/people/user1.png"
+                alt="Imagem do usuário 1" />
+              <div class="flex flex-col gap-1">
+                <p class="text-spartan-text-primary font-bold">fqaueeei5b</p>
+                <div class="flex gap-2">
+                  <i class="bi bi-check-circle-fill text-green-400 text-xs"></i>
+                  <p class="text-xs font-light text-spartan-text-secondary">
+                    Compra verificada
+                  </p>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- user 2 -->
+          <article
+            class="cursor-pointer flex flex-col gap-3 bg-spartan-bg-secondary px-4 py-6 rounded-2xl border border-white/5 hover:border-bg-spartan-accent-primary">
+            <!-- header -->
+            <div class="flex gap-2 items-center justify-start text-spartan-accent-secondary text-sm">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <cite class="text-xs font-light text-spartan-text-secondary">"Foi para o meu marido e ele amou, veio tudo
+              certinho e no
+              sabor certo que pedimos. Chegou bem rápido, pedi dia 5 e chegou
+              dia 9.Compraremos novamente sem dúvida!"</cite>
+            <div class="border-b border-white/5"></div>
+            <a href="https://shopee.com.br/shop/buyer/394251608" target="_blank" class="flex gap-3 items-center">
+              <img class="w-10 h-10 object-center object-cover rounded-full" src="assets/people/user2.png"
+                alt="Imagem do usuário 2" />
+              <div class="flex flex-col gap-1">
+                <p class="text-spartan-text-primary font-bold">
+                  gothbaby_6661
+                </p>
+                <div class="flex gap-2">
+                  <i class="bi bi-check-circle-fill text-green-400 text-xs"></i>
+                  <p class="text-xs font-light text-spartan-text-secondary">
+                    Compra verificada
+                  </p>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- user 2 -->
+          <article
+            class="cursor-pointer flex flex-col gap-3 bg-spartan-bg-secondary px-4 py-6 rounded-2xl border border-white/5 hover:border-bg-spartan-accent-primary">
+            <!-- header -->
+            <div class="flex gap-2 items-center justify-start text-spartan-accent-secondary text-sm">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <cite class="text-xs font-light text-spartan-text-secondary">
+              “Chegou antes do prazo. Veio tudo lacrado, certinho. Achei o
+              máximo a embalagem do whey ter esse tamanho mais compacto, mil
+              vezes mais fácil de guardar!”
+            </cite>
+            <div class="border-b border-white/5"></div>
+            <a href="https://shopee.com.br/shop/buyer/408553931" target="_blank" class="flex gap-3 items-center">
+              <img class="w-10 h-10 object-center object-cover rounded-full" src="assets/people/user3.png"
+                alt="Imagem do usuário 3" />
+              <div class="flex flex-col gap-1">
+                <p class="text-spartan-text-primary font-bold">Kadrizi</p>
+                <div class="flex gap-2">
+                  <i class="bi bi-check-circle-fill text-green-400 text-xs"></i>
+                  <p class="text-xs font-light text-spartan-text-secondary">
+                    Compra verificada
+                  </p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <!-- questions -->
+    <section id="question" class="px-4 py-6">
+      <div class="container m-auto md:max-w-md flex flex-col gap-6">
+        <!-- caption -->
+        <div class="container m-auto md:max-w-md flex flex-col items-center gap-1 text-center">
+          <h2 class="text-3xl text-spartan-text-primary font-extrabold">
+            Perguntas frequentes
+          </h2>
+          <p class="text-base text-spartan-text-secondary font-light">
+            Tudo que você precisa saber sobre o kit.
+          </p>
+        </div>
+        <ul class="grid grid-rows-1 gap-3">
+          <li class="flex flex-col">
+            <div
+              class="min-h-20 flex justify-between gap-6 items-center text-center bg-spartan-bg-secondary p-4 rounded-2xl">
+              <i class="bi bi-question-circle-fill text-spartan-accent-primary font-base"></i>
+              <p class="text-base text-spartan-text-primary font-semibold">
+                Como funciona o kit completo?
+              </p>
+              <button class="btn-info text-spartan-accent-primary text-base" type="button">
+                <i class="bi bi-arrow-down-circle-fill"></i>
+              </button>
+            </div>
+            <span class="info  bg-spartan-bg-secondary rounded-2xl">
+              <p class="text-sm font-medium text-spartan-text-secondary" aria-hidden="true">
+                O kit completo combina os principais suplementos essenciais
+                para quem busca resultados reis. O Whey Protein Fusion fornce
+                proteína de alta qualidade para recuperação e ganho de massa,
+                a Creatina Monohidratada aumenta força e performance, e os
+                BCAA reduzem fadiga e melhorar recuperação pós-treino.
+                Combinados, eles criam um efetio sinérgico que maximiza os
+                resultados do treino.
+              </p>
+            </span>
+          </li>
+          <li class="flex flex-col">
+            <div
+              class="flex min-h-20 justify-between gap-6 items-center bg-spartan-bg-secondary p-4 rounded-2xl text-center">
+              <i class="bi bi-question-circle-fill text-spartan-accent-primary font-base"></i>
+              <h4 class="text-base text-spartan-text-primary font-semibold">
+                Quais são os benefícios do Whey Protein Fusion?
+              </h4>
+              <button class="btn-info text-spartan-accent-primary text-base" type="button">
+                <i class="bi bi-arrow-down-circle-fill"></i>
+              </button>
+            </div>
+            <span class="info bg-spartan-bg-secondary rounded-2xl">
+              <p class="text-sm font-medium text-spartan-text-secondary">
+                O Whey Protein Fusion (um tipo de whey blend) oferece
+                benefícios tanto para ganho de massa muscular quanto para
+                recuperação e saciedade, pois combina diferentes tipos de
+                proteína com absorção rápida e lenta, garantindo suporte
+                contínuo ao corpo. É especialmente útil para quem treina
+                pesado e busca resultados consistentes.
+              </p>
+            </span>
+          </li>
+
+          <li class="flex flex-col">
+            <div
+              class="min-h-20 flex justify-between gap-6 items-center bg-spartan-bg-secondary p-4 rounded-2xl text-center">
+              <i class="bi bi-question-circle-fill text-spartan-accent-primary font-base"></i>
+              <h4 class="text-base text-spartan-text-primary font-semibold">
+                A creatina é relmente eficaz?
+              </h4>
+              <button class="btn-info text-spartan-accent-primary text-base" type="button">
+                <i class="bi bi-arrow-down-circle-fill"></i>
+              </button>
+            </div>
+            <span class="info bg-spartan-bg-secondary rounded-2xl">
+              <p class="text-sm font-medium text-spartan-text-secondary">
+                Sim, a creatina é comprovadamente eficaz e é considerada o
+                suplemento ergogênico mais estudado e seguro do mundo, com
+                benefícios claros para força, potência, ganho de massa
+                muscular e até funções cognitivas. A forma mais recomendada é
+                a creatina monohidratada, que apresenta melhor custo-benefício
+                e absorção.
+              </p>
+            </span>
+          </li>
+
+          <li class="flex flex-col overflow-hidden">
+            <div
+              class=" min-h-20 flex justify-between gap-6 items-center bg-spartan-bg-secondary p-4 rounded-2xl text-center">
+              <i class="bi bi-question-circle-fill text-spartan-accent-primary font-base"></i>
+              <h4 class="text-base text-spartan-text-primary font-semibold">
+                O kit é realmente seguro?
+              </h4>
+              <button class="btn-info text-spartan-accent-primary text-base" type="button">
+                <i class="bi bi-arrow-down-circle-fill"></i>
+              </button>
+            </div>
+            <span class="info bg-spartan-bg-secondary rounded-2xl">
+              <p class="text-sm font-medium text-spartan-text-secondary">
+                Sim! O Kit Whey Protein Fusion + BCAA + Creatina + Shaker é
+                seguro quando comprado de fornecedores oficiais. Lojas como a
+                Espartanos Suplementos na Shopee têm milhares de vendas
+                confirmadas, avaliação média de 4.8/5 estrelas e a plataforma
+                garante proteção ao comprador com reembolso em caso de
+                problemas.
+              </p>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <!-- section -->
+    <section id="cta" class="px-4 py-6">
+      <div
+        class="container m-auto px-4 py-6 md:max-w-md flex flex-col gap-6 rounded-2xl bg-spartan-accent-primary text-center">
+        <!-- caption -->
+        <div>
+          <i class="bi bi-trophy-fill text-2xl text-spartan-text-primary"></i>
+          <div class="flex flex-col gap-2">
+            <h2 class="text-2xl uppercase font-extrabold text-spartan-text-primary">
+              CHEGA DE ESPERAR, O MOMENTO É AGORA
+            </h2>
+            <p class="text-base font-light text-spartan-text-primary">
+              Cada dia sem o kit é um dia desperdiçado na sua jornada. Dê o
+              primeiro passo e alcance os resultados que você merece.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a class="flex items-center justify-center gap-3 p-3 h-max bg-white rounded-full text-sm text-spartan-accent-primary"
+            href="https://s.shopee.com.br/7prosJ35hj" target="_blank">
+            <i class="bi bi-cart-fill"></i>
+            <p class="font-semibold">Quero meu kit - R$76,42</p>
+          </a>
+
+          <div class="flex gap-1 items-center justify-center text-xs text-spartan-text-primary">
+            <i class="bi bi-lock-fill "></i>
+            <p>Garantia de 30 dias incluso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <section id="author" class="px-4 py-6">
+      <div class="container m-auto md:max-w-md">
+        <article class="flex flex-col gap-6 px-4 py-6 bg-spartan-bg-secondary rounded-2xl border-white/5">
+          <!-- header -->
+          <div class="flex flex-col gap-2 text-center uppercase">
+            <p class="text-sm font-medium text-spartan-accent-variant">Quem está por trás disto?</p>
+            <h3 class="text-2xl text-spartan-text-primary">Conheça <span class="text-spartan-accent-primary">o
+                Autor</span></h3>
+          </div>
+          <img class="rounded-2xl max-h-84" src="assets/people/author.png" alt="Imagem do autor do site">
+          <!-- body -->
+          <div class="flex flex-col gap-3">
+            <div
+              class="rounded-full flex items-center gap-1 px-2 py-1 bg-spartan-accent-primary text-spartan-text-primary w-max h-max">
+              <i class="bi bi-shield-fill-check"></i>
+              <p class="text-xs uppercase">Especialista certificado</p>
+            </div>
+            <h3 class="uppercase text-2xl font-extrabold text-spartan-text-primary">Jonathan G. Ferreira</h3>
+            <div class="text-xs flex items-center gap-3 uppercase text-spartan-accent-variant">
+              <p>Personal trainer</p>
+              <i class="text-[6px] bi bi-circle-fill"></i>
+              <p>Nutrólogo esportivo</p>
+            </div>
+            <p class="text-sm font-light text-spartan-text-secondary">Com anos de experiência no universo fitness e no
+              mercado de afiliados, Jonatan dedica seu trabalho a curar os melhores produtos de suplementação —
+              testados, avaliados e selecionados a dedo para quem leva o resultado a sério.</p>
+            <p class="text-sm font-light text-spartan-text-secondary">Apaixonado por treino e nutrição, alia
+              conhecimento prático com as melhores ofertas do mercado para que você compre com segurança e evolua de
+              verdade.</p>
+          </div>
+          <!-- footer -->
+          <div class="grid grid-cols-2 grid-rows-2 gap-3">
+            <div class="text-center px-2 py-4 border border-white/5 rounded-2xl bg-spartan-bg-tertiary/30">
+              <h4 class="font-extrabold uppercase text-2xl text-spartan-accent-primary">12+</h4>
+              <p class="text-sm text-spartan-text-secondary text-light">Anos de Exp.</p>
+            </div>
+
+            <div class="text-center px-2 py-4 border border-white/5 rounded-2xl bg-spartan-bg-tertiary/30">
+              <h4 class="font-extrabold uppercase text-2xl text-spartan-accent-primary">44K</h4>
+              <p class="text-sm text-spartan-text-secondary text-light">Clientes</p>
+            </div>
+
+            <div class="col-span-2 text-center px-2 py-4 border border-white/5 rounded-2xl bg-spartan-bg-tertiary/30">
+              <h4 class="font-extrabold uppercase text-2xl text-spartan-accent-primary">98%</h4>
+              <p class="text-sm text-spartan-text-secondary text-light">Satisfação</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <section id="newsletter" class="px-4 py-6">
+      <div
+        class="container m-auto md:max-w-md bg-spartan-accent-primary/30 border border-spartan-accent-primary/30 px-4 py-6 flex flex-col gap-6 rounded-2xl bg-spartan-accent-primary text-center">
+        <!-- caption -->
+        <div>
+          <i class="bi bi-trophy-fill text-2xl text-spartan-text-primary"></i>
+          <div class="flex flex-col gap-2">
+            <h2 class="text-2xl uppercase font-extrabold text-spartan-text-primary">
+              Receba as melhores<br /><span class="text-spartan-accent-primary">ofertas em primeira <br />mão</span>
+            </h2>
+            <p class="text-base font-light text-spartan-text-primary">
+              Cadastre seu e-mail e seja o primeiro a saber sobre promoções exclusivas, lançamentos e conteúdos de
+              performance.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a class="flex items-center justify-center gap-3 p-3 h-max bg-white rounded-full text-sm text-spartan-accent-primary"
+            href="https://s.shopee.com.br/7prosJ35hj" target="_blank">
+            <i class="bi bi-cart-fill"></i>
+            <p class="font-semibold">Quero meu kit - R$76,42</p>
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <form id="newsletterForm" class="grid grid-cols-3">
+            <input id="email"
+              class="col-span-2 rounded-l-lg text-xs px-4 py-3 bg-spartan-bg-tertiary text-spartan-text-sedondary focus:outline-none focus:text-spartan-text-primary"
+              type="email" placeholder="Seu melhor e-mail"
+              required
+              >
+            <button
+              class="px-4 text-xs rounded-r-lg uppercase font-medium col-span-1 w-full bg-spartan-accent-primary text-spartan-text-primary"
+              type="submit">
+              Cadastrar
+            </button>
+          </form>
+
+          <div class="flex gap-1 items-center justify-center text-xs text-spartan-text-primary">
+            <i class="bi bi-lock-fill text-green-400"></i>
+            <p>Sem spam. Seus dados estão protegidos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- separator -->
+  <hr class="border-b border-white/5 mx-4" />
+  <!-- footer -->
+  <footer class="px-4 py-6 flex flex-col gap-6 ">
+    <div class="container m-auto md:max-w-md flex flex-col lg:flex-row gap-6">
+      <div class="flex flex-col gap-6">
+        <h2 class="brand-title font-[Protest_Guerrilla] uppercase text-2xl text-spartan-text-primary"><span
+            class="text-spartan-accent-primary">NG </span>Nutrition</h2>
+        <p class="text-sm font-medium text-spartan-text-secondary">Suplementos de alta qualidade para quem busca
+          resultados reais e duradouros.</p>
+        <nav id="contact">
+          <ul class="flex gap-3 items-center">
+            <li class="border border-white/5 px-2 py-1 bg-spartan-bg-secondary w-max h-max rounded-lg">
+              <a href="https://instagram.com/ngnutrition.oficial" target="_blank">
+                <i class="text-lg text-gray-400 bi bi-instagram"></i>
+              </a>
+            </li>
+
+            <li class="border border-white/5 px-2 py-1 bg-spartan-bg-secondary w-max h-max rounded-lg">
+              <a href="https://facebook.com/@ngnutrition.oficial" target="_blank">
+                <i class="text-lg text-gray-400 bi bi-facebook"></i>
+              </a>
+            </li>
+
+            <li class="border border-white/5 px-2 py-1 bg-spartan-bg-secondary w-max h-max rounded-lg">
+              <a href="https://tiktok.com/@ngnutrition.oficial" target="_blank">
+                <i class="text-lg text-gray-400 bi bi-tiktok"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+      <nav class="flex flex-col gap-4">
+        <h3 class="text-lg uppercase font-semibold text-white">Produtos</h3>
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#whey">Whey Protein Fusion</a>
+          </li>
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#creatine">Creatina Monohidratada</a>
+          </li>
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#bcaa">BCAA Aminoácidos</a>
+          </li>
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#pre-training">Pré-Treino</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="flex flex-col gap-4">
+        <h3 class="text-lg uppercase font-semibold text-white">Navegação</h3>
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#author">Sobre nós</a>
+          </li>
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#testimonials">Depoimentos</a>
+          </li>
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#newsletter">Newsletter</a>
+          </li>
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#contact">Contato</a>
+          </li>
+          <li>
+            <a class="text-sm text-light capitalize text-gray-400" href="#policy">Política de Privacidade</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- separator -->
+    <hr class="border-b border-white/5 mx-4" />
+    <div class="flex flex-col gap-3">
+      <p class="text-center text-sm text-gray-500 font-light">&copy; ngnutrition.oficial - Jonatan Gervasio Ferreira -
+        Todos os direitos reservados.</p>
+
+      <p class="capitalize text-xs text-gray-500 text-center">Pagamento seguro:</p>
+      <div id="creditCards" class="flex gap-3 item-center justify-center">
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const btnsInfo = document.querySelectorAll(".btn-info");
+    btnsInfo.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const currentLi = btn.closest("li");
+        const currentInfo = currentLi.querySelector(".info");
+        const currentIcon = btn.children[0];
+
+        // Fecha todos os outros
+        document.querySelectorAll(".info.show").forEach((info) => {
+          if (info !== currentInfo) {
+            info.classList.remove("show");
+            const icon = info.closest("li").querySelector(".btn-info i");
+            icon.classList.replace(
+              "bi-arrow-up-circle-fill",
+              "bi-arrow-down-circle-fill",
+            );
+            icon.style.transform = "rotate(0deg)";
+          }
+        });
+
+        // Alterna o atual
+        currentInfo.classList.toggle("show");
+
+        if (currentInfo.classList.contains("show")) {
+          currentIcon.classList.replace(
+            "bi-arrow-down-circle-fill",
+            "bi-arrow-up-circle-fill",
+          );
+          currentIcon.style.transform = "rotate(180deg)";
+        } else {
+          currentIcon.classList.replace(
+            "bi-arrow-up-circle-fill",
+            "bi-arrow-down-circle-fill",
+          );
+          currentIcon.style.transform = "rotate(0deg)";
+        }
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Lista manual das imagens dentro da pasta assets
+      const imagens = [
+        "img1.png",
+        "img2.png",
+        "img3.png",
+        "img4.png",
+        "img5.png",
+        "img6.png",
+        "img7.png",
+        "img8.png",
+      ];
+
+      const creditCardsGrid = document.getElementById("creditCards");
+
+      imagens.forEach((img) => {
+        const imgEl = document.createElement("img");
+        imgEl.src = `assets/cards/${img}`;
+        imgEl.alt = img;
+        imgEl.className = "object-center object-cover w-6"
+        const wrapper = document.createElement("div");
+        wrapper.className = "p-1 bg-white shadow-lg rounded w-max h-max"
+        wrapper.appendChild(imgEl)
+        creditCardsGrid.appendChild(wrapper);
+      });
+    });
+  </script>
+
+  <!-- Importing Toastify JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    document.getElementById("newsletterForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email= document.getElementById("email").value;
+
+      try {
+        const response = await fetch(`${window.env.API_URL}/newsletter/register`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+       
+        if (response.ok) {
+          console.log("Deu certo!")
+          Toastify({
+            text: data.msg,
+            duration: 3000,
+            gravity: "top", // top or bottom
+            position: "right", // left, center or right
+            backgroundColor: "green"
+          }).showToast();
+        } else {
+
+          Toastify({
+            text: data.msg || "Erro ao cadastrar!",
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "red"
+          }).showToast();
+        }
+      } catch (error) {
+        console.log("Deu errado", error);
+        Toastify({
+          text: "Erro de conexão com o servidor!",
+          duration: 3000,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "orange"
+        }).showToast();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
