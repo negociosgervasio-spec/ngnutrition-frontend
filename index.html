@@ -1123,7 +1123,7 @@
       const email = document.getElementById("email").value;
 
       try {
-        const response = await fetch(`${window.env.API_URL}/newsletter/register`, {
+        const response = await fetch(`/api/newsletter/register`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
