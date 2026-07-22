@@ -25,7 +25,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -40,8 +40,6 @@
       src="https://www.facebook.com/tr?id=2341886706613014&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- Importing config.js -->
-  <script src="config.js"></script>
   <!-- importing tailwind  -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- tailwind.config -->
@@ -485,8 +483,8 @@
         <!-- diabo verde -->
         <article class="relative p-6 rounded-2xl border border-spartan-border-primary/30">
           <!-- background -->
-          <div class="absolute inset-0 rotate-210 bg-gradient-to-r from-black/30 to-[#93000A]/15"></div>
-          <div class="flex flex-col gap-2">
+          <div class="absolute inset-0 z-0 rotate-210 bg-gradient-to-r from-black/30 to-[#93000A]/15"></div>
+          <div class="relative z-50 flex flex-col gap-2">
             <!-- tagline -->
             <div class="py-1 px-2 rounded-full bg-spartan-accent-primary w-max h-max">
               <p class="uppercase text-xs text-spartan-text-primary">
@@ -532,10 +530,7 @@
                 </h3>
               </div>
               <!-- button -->
-              <a class="cursor-pointer p-2 uppercase text-xs text-center text-spartan-text-primary font-extrabold bg-spartan-accent-primary rounded-lg shadow shadow-spartan-accent-primary"
-                href="https://s.shopee.com.br/1gHD5ORLrE" target="_blank">
-                Quero esse também
-              </a>
+              <a class="relative z-50 cursor-pointer bg-spartan-accent-primary text-white px-2 py-1 text-sm uppercase font-semibold shadow shadow-white/5 rounded-full" href="https://s.shopee.com.br/1gHD5ORLrE">Quero este também</a>
             </div>
           </div>
         </article>
